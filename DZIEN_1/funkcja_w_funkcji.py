@@ -80,3 +80,26 @@ def ekstra_liczba(n):
     return n>=100
 
 print(filtruj(liczby,ekstra_liczba))
+
+#funkcja w typie dekoratora
+
+def startstop(funkcja):
+    def wrapper(*args):
+        print("startowanie procesu...")
+        funkcja(*args)
+        print("kończenie procesu...")
+    return wrapper
+
+def zawijanie(czego):
+    print(f"zawijanie {czego} w sreberka!")
+
+print("____________________________")
+
+zw = startstop(zawijanie)
+zw("czekoladek")
+
+@startstop
+def dmuchanie(czego):
+    print(f"dmuchanie {czego} na urodziny")
+
+dmuchanie("świeczek")
