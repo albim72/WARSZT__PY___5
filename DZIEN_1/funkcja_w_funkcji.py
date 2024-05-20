@@ -60,3 +60,23 @@ def multi(n):
 
 print(multi(5)(8))
 
+#przykład 3
+liczby = [45,2,5,256,34,222,42,-345,-23,56,789,34,43]
+
+liczby_parz = list(filter(lambda x:x%2==0,liczby))
+print(liczby_parz)
+
+cube = list(map(lambda x:x**3,liczby))
+print(cube)
+
+def filtruj(dane,test):
+    plus = []
+    for element in dane:
+        if(test(element)):
+            plus.append(element)
+    return plus
+
+def ekstra_liczba(n):
+    return n>=100
+
+print(filtruj(liczby,ekstra_liczba))
