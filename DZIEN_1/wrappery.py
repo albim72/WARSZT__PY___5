@@ -30,3 +30,13 @@ print(gr)
 
 gr2 = greet("Anna","Cześć")
 print(gr2)
+
+@log_calls
+def specadd(a,b,**kwargs):
+    result = a+b
+    for key,value in kwargs.items():
+        print(f"{key}: {value}")
+    return result
+
+radd = specadd(64,5,debug=True,verbose="high")
+print(radd)
