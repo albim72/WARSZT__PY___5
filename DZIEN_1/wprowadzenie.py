@@ -65,5 +65,43 @@ print(qimie)
 print(pimie)
 
 
+#kolekcja - tuple(krotka)
 
+miasto = ("Kraków","Lublin","Warszawa","Płock","Rzeszów","Kraków")
+print(miasto)
+print(type(imiona))
+print(type(miasto))
 
+print(miasto.count("Kraków"))
+print(miasto.index("Rzeszów"))
+
+#kolekcja -set(zbiór)
+drzewa = {"jodła","buk","świerk","dąb","klon","osika","dąb"}
+
+print(f"Klub piłkarski - \"Motor Lublin\"")
+print(f'Klub piłkarski - "Motor Lublin"')
+
+print(drzewa)
+print(type(drzewa))
+
+drzewa.add("świerk zwyczajny")
+print(drzewa)
+
+#kolekcja słownik
+osoba = {
+    "id":89,
+    "imie":"Tadeusz",
+    "nazwisko":"Kot",
+    "rok urodzenia":1976,
+    "miasto":"Tarnów"
+}
+print(osoba)
+print(type(osoba))
+print(osoba["nazwisko"])
+osoba["nazwisko"] = "Kotecki"
+print(osoba)
+osoba["stanowisko"]="dyrektor"
+print(osoba)
+print(osoba.keys())
+print(osoba.values())
+print(osoba.items())
