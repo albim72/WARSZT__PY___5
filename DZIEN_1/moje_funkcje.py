@@ -1,4 +1,4 @@
-from funkcje_no2 import gx
+from funkcje_no2 import gx,rank_list
 #przykład 1
 n=100
 def policz(a:int,b:int,c:float,y:int=109)->int:
@@ -26,3 +26,6 @@ print(f'wynik 1 -> gx = {gx(4)}')
 print(f'wynik 1 -> gx = {gx(4,7)}')
 print(f'wynik 1 -> gx = {gx(2.2,k=9)}')
 print(f'wynik 1 -> gx = {gx(2.2,k=9,b=2)}')
+
+# przykład 4
+rank_list("Java","Python","C#","PHP",nrrank=456)
