@@ -47,3 +47,16 @@ def rejestracja(oplata):
 print(rejestracja(1)(543))
 print(rejestracja(0)())
 print(rejestracja(-11)())
+
+#przykład 3   funkcje anonimowe
+
+print((lambda f:f*2-3)(6))
+
+b = lambda u,w: u+101-w
+print(b(9,4))
+
+def multi(n):
+    return lambda a:a*n
+
+print(multi(5)(8))
+
