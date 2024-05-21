@@ -45,4 +45,28 @@ st1.print_student()
 
 print("___ DRUGI PRACOWNIK ____")
 
+st2 = Student("Tadeusz",44,82,182,78654,"Prawo",4,
+              "XYX","radca",12,11300,
+              "pływanie",10,"100m - 1min 54s ")
+print(st2)
+nlat = int(input("podaj liczbę lat: "))
+print(f'wiek za {nlat} lat -> {st2.wiek_za_n_lat(nlat)}')
+print(f'czy osoba jest pracownikiem: {st2.czypracownik()}')
+st2.print_student()
 print("___ TRZECI PRACOWNIK ____")
+
+st3 = Student("Nadia",25,55,168,75657,"Informatyka",3,
+              "Takie IT","programista",2,6700)
+print(st3)
+nlat = int(input("podaj liczbę lat: "))
+print(f'wiek za {nlat} lat -> {st3.wiek_za_n_lat(nlat)}')
+print(f'czy osoba jest pracownikiem: {st3.czypracownik()}')
+st3.print_student()
+print("___ CZWARTY PRACOWNIK ____")
+st4 = Student("Telimena",21,67,181,656454,"Matematyka",4,
+              dyscyplina="pływanie",lataupr=4,bestwynik="100m - 2min 2s ")
+print(st4)
+nlat = int(input("podaj liczbę lat: "))
+print(f'wiek za {nlat} lat -> {st4.wiek_za_n_lat(nlat)}')
+print(f'czy osoba jest pracownikiem: {st4.czypracownik()}')
+st4.print_student()
