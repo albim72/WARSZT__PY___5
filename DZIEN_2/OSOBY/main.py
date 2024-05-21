@@ -4,6 +4,8 @@ from student import Student
 
 
 print("_____________ klasa Osoba _____________")
+
+print("__ osoba 1 ____")
 os1 = Osoba("Jan",45,87,173)
 print(os1)
 nlat = int(input("podaj liczbę lat: "))
@@ -12,6 +14,22 @@ print(f'czy osoba jest pracownikiem: {os1.czypracownik()}')
 
 os1.set_kolor_oczu("niebieski")
 print(f'nowy kolor: {os1.get_kolor_oczu()}')
+
+print(f'bmi ciała wynosi: {os1.bmi():.2f}, opis: {os1.opisbmi()}')
+print(f"zapotrzebowanie energetyczne: {os1.policz_ppm('m'):.2f} kcal")
+
+print("__ osoba 1 ____")
+os2 = Osoba("Janina",45,87,173)
+print(os2)
+nlat = int(input("podaj liczbę lat: "))
+print(f'wiek za {nlat} lat -> {os2.wiek_za_n_lat(nlat)}')
+print(f'czy osoba jest pracownikiem: {os2.czypracownik()}')
+
+os1.set_kolor_oczu("niebieski")
+print(f'nowy kolor: {os2.get_kolor_oczu()}')
+
+print(f'bmi ciała wynosi: {os2.bmi():.2f}, opis: {os2.opisbmi()}')
+print(f"zapotrzebowanie energetyczne: {os2.policz_ppm('k'):.2f} kcal")
 
 print("_____________ klasa Pracownik _____________")
 
@@ -31,6 +49,8 @@ nlat = int(input("podaj liczbę lat: "))
 print(f'wiek za {nlat} lat -> {pr2.wiek_za_n_lat(nlat)}')
 print(f'czy osoba jest pracownikiem: {pr2.czypracownik()}')
 pr2.print_pracownik()
+print(f'bmi ciała wynosi: {pr2.bmi():.2f}, opis: {pr2.opisbmi()}')
+print(f"zapotrzebowanie energetyczne: {pr2.policz_ppm('m'):.2f} kcal")
 
 print("_____________ klasa Student _____________")
 
@@ -70,3 +90,5 @@ nlat = int(input("podaj liczbę lat: "))
 print(f'wiek za {nlat} lat -> {st4.wiek_za_n_lat(nlat)}')
 print(f'czy osoba jest pracownikiem: {st4.czypracownik()}')
 st4.print_student()
+print(f'bmi ciała wynosi: {st4.bmi():.2f}, opis: {st4.opisbmi()}')
+print(f"zapotrzebowanie energetyczne: {st4.policz_ppm('k'):.2f} kcal")
