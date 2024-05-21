@@ -29,5 +29,22 @@ class Osoba:
 
     def set_kolor_oczu(self,nowykolor):
         self.kolor_oczy = nowykolor
+        
+    def bmi(self):
+        return self.waga/(self.wzrost/100)**2
+    
+    def opisbmi(self):
+        if self.bmi() < 18.5:
+            return "niedowaga"
+        elif self.bmi() <= 25:
+            return "waga normalna"
+        elif self.bmi() <= 30:
+            return "nadwaga"
+        elif self.bmi() <= 35:
+            return "otyłość I stopnia"
+        elif self.bmi() <= 40:
+            return "otyłość II stopnia"
+        else:
+            return "otyłość III stopnia"
 
 
