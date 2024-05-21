@@ -14,11 +14,11 @@ class Student(Pracownik):
         print(f'student nr indeksu: {self.nr_studenta}, kierunek: {self.kierunek}, rok studiów: {self.rok}')
 
     def print_student(self):
-        if self.Firma is not None & self.dyscyplina is not None:
+        if self.firma is not None and self.dyscyplina is not None:
             self.infostudent()
             self.infopracownik()
             self.infosport()
-        elif self.Firma is not None:
+        elif self.firma is not None:
             self.infostudent()
             self.infopracownik()
         elif self.dyscyplina is not None:
@@ -29,5 +29,4 @@ class Student(Pracownik):
 
     def czypracownik(self) -> bool:
         return self.firma is not None
-            
-    
+
