@@ -29,10 +29,10 @@ class Osoba:
 
     def set_kolor_oczu(self,nowykolor):
         self.kolor_oczy = nowykolor
-        
+
     def bmi(self):
         return self.waga/(self.wzrost/100)**2
-    
+
     def opisbmi(self):
         if self.bmi() < 18.5:
             return "niedowaga"
@@ -46,5 +46,16 @@ class Osoba:
             return "otyłość II stopnia"
         else:
             return "otyłość III stopnia"
+        
+    #zapotrzebowanie energetyczne
+        
+    def policz_ppm(self,plec):
+        if plec == "k":
+            return 655.1 + 9.563*self.waga + 1.85*self.wzrost - 4.676*self.wiek
+        elif plec == "m":
+            return 66.5 + 13.75 * self.waga + 5.003 * self.wzrost - 6.775 * self.wiek
+        else:
+            return "zły wybór"
+
 
 
