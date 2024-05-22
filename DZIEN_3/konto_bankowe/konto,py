@@ -1,0 +1,27 @@
+class KontoBankowe:
+    def __init__(self, numer_konta, wlasciciel, saldo=0.0):
+        self.numer_konta = numer_konta
+        self.wlasciciel = wlasciciel
+        self.saldo = saldo
+
+    def wplata(self, kwota):
+        if kwota > 0:
+            self.saldo += kwota
+            print(f"Wpłata {kwota:.2f} PLN wykonana pomyślnie.")
+        else:
+            print("Kwota wpłaty musi być większa niż zero.")
+
+    def wyplata(self, kwota):
+        if kwota > 0:
+            if self.saldo >= kwota:
+                self.saldo -= kwota
+                print(f"Wypłata {kwota:.2f} PLN wykonana pomyślnie.")
+            else:
+                print("Brak wystarczających środków na koncie.")
+        else:
+            print("Kwota wypłaty musi być większa niż zero.")
+
+    def sprawdz_saldo(self):
+        return self.saldo
+
+
