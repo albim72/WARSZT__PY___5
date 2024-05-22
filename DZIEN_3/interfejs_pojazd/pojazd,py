@@ -1,6 +1,9 @@
 from ipojazd import IPojazd
 
 class Pojazd(IPojazd):
+    
+    def __init__(self,opis):
+        self.opis = opis
     def spalanie(self, odl, jedn):
         return jedn*100/odl
 
