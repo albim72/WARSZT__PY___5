@@ -1,0 +1,9 @@
+from pojazd import Pojazd
+
+p1 = Pojazd("analiza pojazdu z silnikiem diesla 1.9TD")
+odl = 567
+jedn = 51
+cj = 6.57
+
+print(f'spalanie [l/100km]: {p1.spalanie(odl,jedn):.2f}')
+print(f'koszt przejazdu na odcinku {odl} km wynosi: {p1.kosztyprzejazdu(odl,jedn,cj):.2f} zł')
