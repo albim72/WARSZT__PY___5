@@ -1,0 +1,21 @@
+from oblicz import Obliczenia
+from daty import Dates
+
+print(f'wartość wynosi: {Obliczenia.moblicz(4,63,6)}')
+
+obl = Obliczenia(3,5,2)
+print(f'wartość metody przez obiekt: {obl.moblicz(13,15,35)}')
+
+date = Dates("13-12-2023")
+dataFormatDB = "13/12/2023"
+
+dateWithDash = Dates.toDashDate(dataFormatDB)
+d1 = date.get_date()
+d2 = dateWithDash
+
+if(d1==d2):
+    print("identyczne daty")
+    print(f'{d1} = {d2}')
+else:
+    print("rożne daty")
+    print(f'{d1} != {d2}')
